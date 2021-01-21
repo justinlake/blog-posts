@@ -1,0 +1,95 @@
+@import '~bootstrap-scss/bootstrap.scss';
+
+.app {
+    position: relative;
+
+    .header {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(#aaa, 0.8);
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+
+        @include media-breakpoint-up(md) {
+            padding: 1rem 5%;
+        }
+
+        h1 {
+            font-size: 32px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 40px;
+            }
+        }
+
+        .add-post-button {
+            margin-left: auto;
+        }
+    }
+
+    .add-post-form {
+        background-color: #fff;
+        border: 1px solid #666;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(#666, 0.8);
+        display: block;
+        left: 50%;
+        margin: 0;
+        max-width: 600px;
+        padding: 2rem;
+        position: absolute;
+        top: 6rem;
+        transform: translate(-50%, 0);
+        width: calc(100% - 2rem);
+
+        @include media-breakpoint-up(md) {
+            margin: 0 auto;
+            top: 10rem;
+        }
+
+        textarea {
+            margin-bottom: 1rem;
+        }
+
+        button {
+            margin-right: 1rem;
+        }
+    }
+
+    .post {
+        border-bottom: 1px dashed #aaa;
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 0 1rem 1rem;
+        padding: 1.5rem 1rem;
+
+        @include media-breakpoint-up(md) {
+            margin: 0 auto;
+            max-width: 80%;
+        }
+
+        &:nth-of-type(2n) {
+            background-color: #eee;
+        }
+
+        &:last-of-type {
+            border: 0;
+        }
+
+        &-title {
+            font-size: 24px;
+            margin-bottom: 1rem;
+        }
+
+        &-body {
+            font-size: 18px;
+        }
+
+        .delete-post-button {
+            margin-left: auto;
+        }
+    }
+}

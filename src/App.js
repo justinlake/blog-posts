@@ -4,6 +4,8 @@ import { fetchPosts } from './utils/fetchUtils';
 import Header from './components/Header';
 import Post from './components/Post';
 
+import './assets/css/app.scss';
+
 const App = () => {
     const posts = useSelector((state) => state.blogReducer.postList);
     const dispatch = useDispatch();
